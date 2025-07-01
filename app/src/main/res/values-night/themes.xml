@@ -1,0 +1,9 @@
+<!-- res/values-night/themes.xml (dark mode) -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Notes" parent="Theme.Material3.DayNight">
+        <item name="colorSurface">#121212</item>
+        <item name="colorOutline">#888888</item>
+    </style>
+
+</resources>

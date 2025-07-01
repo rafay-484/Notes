@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:layout_height="wrap_content">
+    android:padding="20dp">
 
     <EditText
         android:id="@+id/inputTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Title"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"/>
 
     <EditText
         android:id="@+id/inputContent"
@@ -18,5 +18,18 @@
         android:layout_height="wrap_content"
         android:hint="Content"
         android:minHeight="48dp"
-        android:minLines="1" />
+        android:minLines="3"/>
+
+    <CheckBox
+        android:id="@+id/checkPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pin Note"/>
+
+    <!-- Lock Note Checkbox -->
+    <CheckBox
+        android:id="@+id/checkLock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lock Note"/>
 </LinearLayout>

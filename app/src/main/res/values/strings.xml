@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="add_note">Add Note</string>
+    <string name="search_hint">Search notes...</string>
+    <string name="pin_note">Pin Note</string>
+    <string name="lock_note">Lock Note</string>
+    <string name="enter_pin">Enter 3-Digit PIN</string>
+</resources>

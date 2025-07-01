@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/txtAttempts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attempts left: 3"
+        android:textColor="@color/red"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/inputPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter 3-digit PIN"
+        android:inputType="numberPassword"
+        android:maxLength="3"
+        android:minHeight="48dp" />
+</LinearLayout>

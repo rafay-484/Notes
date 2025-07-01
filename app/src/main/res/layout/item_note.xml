@@ -1,22 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="10dp"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/noteLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#EEE">
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
 
-    <TextView
-        android:id="@+id/textTitle"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textContent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="14sp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/iconPin"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_pin"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/iconLock"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_toStartOf="@id/iconPin"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_lock"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/textDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

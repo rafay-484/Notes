@@ -1,26 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".MainActivity">
+    android:background="@color/white">
 
-    <Button
-        android:id="@+id/btnAddNote"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="125dp"
-        android:text="@string/add_note" />
+        android:background="@color/blue"
+        android:orientation="vertical"
+        android:padding="16dp">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notes"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <!-- Search Bar -->
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:queryHint="Search notes..."
+            android:iconifiedByDefault="false"
+            android:theme="@style/SearchViewStyle"
+            app:queryBackground="@android:color/transparent"/>
+    </LinearLayout>
+
+    <!-- Notes List -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="10dp"/>
+        android:layout_below="@id/header"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        android:paddingBottom="72dp"/>
 
-</LinearLayout>
+    <!-- Add Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="@color/blue"
+        android:contentDescription="Add new Note"/>
+</RelativeLayout>
